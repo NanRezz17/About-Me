@@ -51,6 +51,10 @@ header {
     font-size: 1.1rem;
     font-weight: 800;
     letter-spacing: 2px;
+    background-color: var(--text-black);
+    color: white;
+    padding: 8px 16px;
+    border-radius: 20px;
 }
 
 /* --- Hamburger --- */
@@ -109,7 +113,25 @@ header {
 .about, .skills { padding: 120px 10%; }
 .about { background-color: var(--gray-light); }
 
-.profile-img img { width: 130px; border-radius: 50%; filter: grayscale(100%); border: 2px solid var(--text-black); padding: 5px; margin-bottom: 25px; }
+.profile-img {
+    cursor: pointer;
+    display: inline-block;
+}
+
+.profile-img img { 
+    width: 130px; 
+    border-radius: 50%; 
+    filter: grayscale(100%); 
+    border: 2px solid var(--text-black); 
+    padding: 5px; 
+    margin-bottom: 25px; 
+    transition: 0.3s cubic-bezier(0.85, 0, 0.15, 1);
+}
+
+.profile-img img:hover {
+    transform: scale(0.92);
+}
+
 .hero h1 { font-size: 4rem; font-weight: 800; letter-spacing: -2px; line-height: 1; }
 .tag { background: var(--text-black); color: #fff; padding: 6px 18px; font-size: 0.8rem; font-weight: 600; border-radius: 12px; display: inline-block; margin-top: 10px; }
 .social-icons { margin-top: 30px; }
@@ -155,7 +177,6 @@ footer { padding: 80px 10% 40px; text-align: center; background-color: var(--gra
 .contact-btn:hover {
     background-color: #333;
     transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
 }
 
 .love-text { font-size: 0.9rem; color: var(--text-gray); letter-spacing: 1px; margin-top: 20px; }
