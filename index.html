@@ -1,34 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Me</title>
-    <link rel="stylesheet" href="styles.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About Me - Rez</title>
+<link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="container">
-        <header>
-            <h1 class="title">Hello, I'm Nandaraka!</h1>
-            <p class="subtitle">Welcome to my personal page 😎</p>
-        </header>
-        <section class="bio">
-            <h2>About Me</h2>
-            <p>Hello! I'm a tech enthusiast, software developer, and lover of all things cool. I enjoy exploring new technologies and finding innovative ways to solve problems. When I'm not coding, you'll find me reading, gaming, or messing with gadgets.</p>
-        </section>
-        <section class="skills">
-            <h2>Skills & Interests</h2>
-            <ul>
-                <li>Web Development</li>
-                <li>AI & Machine Learning</li>
-                <li>App Development</li>
-                <li>Open Source Contributor</li>
-                <li>Music Lover 🎧</li>
-            </ul>
-        </section>
-        <footer>
-            <p class="footer-text">Thanks for visiting my page! 😊</p>
-        </footer>
-    </div>
+
+<header class="header">
+  <div class="logo">Nandaraka</div>
+  <nav class="nav" id="navMenu">
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#contact">Contact</a>
+  </nav>
+  <div class="hamburger" id="hamburger">
+    <span></span><span></span><span></span>
+  </div>
+</header>
+
+<section id="about" class="section">
+  <h1>Hello, I'm Nandaraka!</h1>
+  <p>Welcome to my personal page 👋</p>
+</section>
+
+<section id="skills" class="section">
+  <h2>Skills & Interests</h2>
+  <ul>
+    <li>Web Development</li>
+    <li>AI & Machine Learning</li>
+    <li>Root development android</li>
+    <li>Music Lover </li>
+  </ul>
+</section>
+
+<section id="contact" class="section">
+  <h2>Contact Me</h2>
+  <p>Reach me: nrrizerr28gmail.com</p>
+</section>
+
+<script>
+const hamburger = document.getElementById('hamburger');
+const navMenu = document.getElementById('navMenu');
+hamburger.addEventListener('click', () => {
+  navMenu.classList.toggle('active');
+});
+</script>
+
 </body>
 </html>
