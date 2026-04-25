@@ -1,0 +1,126 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body and Background */
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #00aaff, #0066cc);
+    color: #fff;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Container for the page content */
+.container {
+    width: 80%;
+    max-width: 900px;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 1.5s ease-out;
+}
+
+/* Header section */
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    animation: slideIn 2s ease-out;
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    color: #ccc;
+    margin-top: 10px;
+}
+
+/* Bio section */
+.bio {
+    margin-bottom: 20px;
+}
+
+.bio h2 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+.bio p {
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+/* Skills section */
+.skills ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.skills li {
+    font-size: 1.2rem;
+    margin: 10px 0;
+    position: relative;
+    padding-left: 30px;
+    animation: fadeInUp 1s ease-out;
+}
+
+.skills li::before {
+    content: '✔';
+    position: absolute;
+    left: 0;
+    color: #ff4b5c;
+    font-size: 1.4rem;
+}
+
+/* Footer section */
+footer {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.footer-text {
+    font-size: 1rem;
+    color: #ccc;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
