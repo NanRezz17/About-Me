@@ -228,18 +228,19 @@ footer { padding: 80px 10% 40px; text-align: center; background-color: var(--gra
     display: inline-block; 
     text-decoration: none; 
     background-color: #ffffff; 
-    border-top: 1px solid #eef0f3; 
-    color: white; 
+    border-top: 2x solid #3b3a3a; 
+    color: #3b3a3a; 
     padding: 18px 40px; 
     font-weight: 800; 
     text-transform: uppercase; 
     border-radius: 20px;
-    transition: 0.3s ease;
+    transition: 0.1s ease;
     cursor: pointer;
 }
 
 .contact-btn:hover {
-    background-color: #333;
+    background-color: #ffffff !important; 
+    color: #3b3a3a !important; 
     transform: scale(0.95);
 }
 
