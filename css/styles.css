@@ -153,6 +153,75 @@ header {
 .skill-item h3 { text-transform: uppercase; font-weight: 800; margin-bottom: 15px; font-size: 1.1rem; }
 .skill-item p { font-size: 0.9rem; opacity: 0.8; }
 
+/* --- Journey Section (Timeline) --- */
+.journey { 
+    padding: 100px 10%; 
+    background-color: #f9f9f9; 
+}
+
+.timeline { 
+    max-width: 800px; 
+    margin: 0 auto; 
+    position: relative; 
+    padding-left: 30px; 
+    border-left: 2px solid #000000; 
+}
+
+.timeline-item { 
+    position: relative; 
+    margin-bottom: 40px; 
+}
+
+.timeline-dot { 
+    width: 14px; 
+    height: 14px; 
+    background-color: #000000; 
+    position: absolute; 
+    left: -38px; 
+    top: 6px; 
+    border-radius: 50%; 
+}
+
+.timeline-date { 
+    font-weight: 800; 
+    font-size: 0.85rem; 
+    text-transform: uppercase; 
+    letter-spacing: 1px; 
+    margin-bottom: 8px; 
+    color: #555555; 
+}
+
+.timeline-content { 
+    background: #ffffff; 
+    padding: 30px; 
+    border-radius: 24px; 
+    border: 1px solid #eef0f3; 
+}
+
+.timeline-content h3 { 
+    font-size: 1.3rem; 
+    font-weight: 800; 
+    margin-bottom: 12px; 
+}
+
+.timeline-content p { 
+    font-size: 0.95rem; 
+    color: #555555; 
+    line-height: 1.7; 
+    margin-bottom: 15px; 
+}
+
+.badge { 
+    display: inline-block; 
+    background: #eee; 
+    padding: 4px 12px; 
+    border-radius: 20px; 
+    font-size: 0.75rem; 
+    font-weight: 600; 
+    margin-right: 5px; 
+    color: #000000; 
+}
+
 /* --- Footer --- */
 footer { padding: 80px 10% 40px; text-align: center; background-color: var(--gray-light); }
 .contact-btn { 
@@ -182,6 +251,9 @@ footer { padding: 80px 10% 40px; text-align: center; background-color: var(--gra
     .about-text { padding: 30px 20px; }
     .skills-grid { grid-template-columns: 1fr; }
     .section-title { font-size: 2rem; }
+    .journey { padding: 80px 6%; }
+    .timeline { padding-left: 20px; }
+    .timeline-dot { left: -28px; }
 }
 
 @media (max-width: 480px) {
@@ -189,4 +261,5 @@ footer { padding: 80px 10% 40px; text-align: center; background-color: var(--gra
     .hero h1 { font-size: 2rem; }
     .social-icons a { font-size: 1.8rem; margin: 0 10px; }
     .about, .skills { padding: 60px 5%; }
+    .journey { padding: 60px 5%; }
 }
