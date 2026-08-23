@@ -118,7 +118,7 @@ header {
 .profile-img img { 
     width: 130px; 
     border-radius: 50%; 
-    filter: grayscale(100%); 
+    filter: grayscale(20%); 
     border: 2px solid var(--text-black); 
     padding: 5px; 
     margin-bottom: 25px; 
