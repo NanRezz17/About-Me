@@ -89,22 +89,25 @@
         }
     });
     
-    // INTERACTIVE TERMINAL LOGIC
-    document.addEventListener('DOMContentLoaded', () => {
-        const terminalInput = document.querySelector('#terminal-input');
-        const terminalOutput = document.querySelector('#terminal-output');
+     //  INTERACTIVE TERMINAL LOGIC
+     (function initTerminal() {
+        const terminalInput = document.getElementById('terminal-input');
+        const terminalOutput = document.getElementById('terminal-output');
 
-        if (terminalInput && terminalOutput) {
-            terminalInput.addEventListener('input', (event) => {
-            const inputValue = event.target.value;
-        if (inputValue.trim() === "") {
-            terminalOutput.textContent = "";
-            terminalOutput.style.display = "none";
-            } else {
-            terminalOutput.style.display = "flex";
-            terminalOutput.textContent = `printed= ${inputValue}`;
-            }
-        });
-    }
-});
+     if (terminalInput && terminalOutput) {
+         terminalInput.addEventListener('keydown', function (event) {
+             if (event.key === 'Enter') {
+                 const val = this.value.trim();
+
+                 if (val.length > 0) {
+                     terminalOutput.textContent = 'printed= ' + val;
+                     terminalOutput.classList.add('active');
+                 } else {
+                     terminalOutput.textContent = '';
+                     terminalOutput.classList.remove('active');
+                 }
+             }
+         });
+     }
+ })();
 });
