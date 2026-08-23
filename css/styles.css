@@ -230,29 +230,37 @@ header {
 }
 
 .terminal-box {
+    width: 100%;
     max-width: 650px;
     margin: 0 auto;
     background-color: #000000;
-    border-radius: 10px;
-    border: 1px solid #333333;
+    border-radius: 32px;
+    border: 6px solid #333333;
     overflow: hidden;
     font-family: 'Courier New', Courier, monospace;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    box-sizing: border-box;
 }
 
 .terminal-header {
     background-color: #1a1a1a;
-    padding: 12px 18px;
+    padding: 14px 15px;
     display: flex;
     align-items: center;
-    gap: 8px;
+    position: relative;
     border-bottom: 1px solid #2a2a2a;
 }
 
+.dots-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    z-index: 2;
+}
+
 .dot {
-    width: 11px;
-    height: 11px;
-    border-radius: 50%;
+    width: 8px;
+    height: 8px;
+    border-radius: 20%;
     display: inline-block;
 }
 
@@ -270,10 +278,12 @@ header {
 
 .terminal-title {
     color: #888888;
-    font-size: 0.8rem;
-    margin-left: 10px;
-    letter-spacing: 1px;
+    font-size: 0.85rem;
     font-weight: 600;
+    letter-spacing: 1px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .terminal-body {
@@ -282,8 +292,9 @@ header {
     font-size: 0.95rem;
     display: flex;
     flex-direction: column;
-    gap: 12px;
-    min-height: 100px;
+    gap: 8px;
+    min-height: 150px;
+    box-sizing: border-box;
 }
 
 .terminal-input-wrapper {
@@ -291,12 +302,15 @@ header {
     align-items: center;
     gap: 10px;
     width: 100%;
+    overflow: hidden;
 }
 
 .prompt {
     color: #27c93f;
     font-weight: bold;
     user-select: none;
+    white-space: nowrap;
+    flex-shrink: 0;
 }
 
 #terminal-input {
@@ -307,6 +321,7 @@ header {
     font-family: 'Courier New', Courier, monospace;
     font-size: 0.95rem;
     width: 100%;
+    min-width: 0; 
     caret-color: #ffffff;
 }
 
@@ -319,20 +334,17 @@ header {
     width: 100%;
     color: #cccccc;
     font-size: 0.9rem;
+    display: none;
+    margin-top: 4px;
+    overflow-wrap: break-word;
     word-break: break-all;
-    display: none; 
-    align-items: center;
+    white-space: normal;
 }
 
-.terminal-output::after {
-    content: '';
-    display: inline-block;
-    width: 8px;
-    height: 16px;
-    background-color: #ffffff;
-    margin-left: 6px;
-    animation: blinkCursor 0.8s infinite;
+.terminal-output.active {
+    display: block !important;
 }
+
 
 @keyframes blinkCursor {
     0%, 100% {
