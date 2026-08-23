@@ -4,9 +4,6 @@
  * Fully optimized with error handling and validation
  */
 
-document.addEventListener('DOMContentLoaded', () => {
-    console.log('✅ Portfolio Script Loaded Successfully');
-
     // Get DOM elements with validation
     const hamburger = document.querySelector('#hamburger');
     const navMenu = document.querySelector('#nav-menu');
@@ -91,6 +88,23 @@ document.addEventListener('DOMContentLoaded', () => {
             console.log('🔐 Menu closed with Escape key');
         }
     });
+    
+    // INTERACTIVE TERMINAL LOGIC
+    document.addEventListener('DOMContentLoaded', () => {
+        const terminalInput = document.querySelector('#terminal-input');
+        const terminalOutput = document.querySelector('#terminal-output');
 
-    console.log('✅ All portfolio features initialized');
+        if (terminalInput && terminalOutput) {
+            terminalInput.addEventListener('input', (event) => {
+            const inputValue = event.target.value;
+        if (inputValue.trim() === "") {
+            terminalOutput.textContent = "";
+            terminalOutput.style.display = "none";
+            } else {
+            terminalOutput.style.display = "flex";
+            terminalOutput.textContent = `printed= ${inputValue}`;
+            }
+        });
+    }
+});
 });
