@@ -100,7 +100,7 @@
         <h2 class="section-title">My Journey</h2>
         <div class="timeline">
             
-            <!-- Prestasi 1 (Paling Baru) -->
+            <!-- 1 (Newest) -->
             <div class="timeline-item">
                 <div class="timeline-dot"></div>
                 <div class="timeline-date">Latest (05-30-2026)</div>
@@ -113,7 +113,7 @@
                 </div>
             </div>
 
-            <!-- Prestasi 2 (Milestone Sebelumnya) -->
+            <!-- 2 (Milestone) -->
             <div class="timeline-item">
                 <div class="timeline-dot"></div>
                 <div class="timeline-date">Milestone (?-?-2026)</div>
@@ -128,30 +128,32 @@
         </div>
     </section>
 
-    <!-- ========================================== -->
-    <!--       INTERACTIVE TERMINAL -->
-   <section class="terminal-section">
-    <div class="container">
+    <!--  INTERACTIVE TERMINAL SECTION  -->
+    <section class="terminal-section">
+        <div class="container">
         <div class="terminal-box">
-            <!-- Header Terminal Linux -->
+            <!-- Header Terminal -->
             <div class="terminal-header">
-                <span class="dot red"></span>
-                <span class="dot yellow"></span>
-                <span class="dot green"></span>
-                <span class="terminal-title">nanrezz@terminal:~</span>
+                <div class="dots-wrapper">
+                    <span class="dot red"></span>
+                    <span class="dot yellow"></span>
+                    <span class="dot green"></span>
+                </div>
+                <span class="terminal-title">Terminal</span>
             </div>
             <!-- Body Terminal -->
             <div class="terminal-body">
                 <div class="terminal-input-wrapper">
-                    <span class="prompt">$ </span>
-                    <input type="text" id="terminal-input" placeholder="Type anything!" autocomplete="off" spellcheck="false">
+                    <span class="prompt">nanrezz@terminal:~$</span>
+                    <input type="text" id="terminal-input" placeholder="Type anything" maxlength="40" autocomplete="off" spellcheck="false">
                 </div>
-                <!-- Output teks  -->
+                <!-- Output Text-->
                 <div id="terminal-output" class="terminal-output"></div>
             </div>
         </div>
     </div>
 </section>
+
 
     <!-- Footer -->
     <footer>
