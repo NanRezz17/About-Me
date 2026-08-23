@@ -12,10 +12,10 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    box-shadow: none !important; /* No Shadow */
+    box-shadow: none !important;
 }
 
-/* Memastikan scroll halus di seluruh browser */
+/* Smooth scrolling */
 html {
     scroll-behavior: smooth;
 }
@@ -27,7 +27,7 @@ body {
     overflow-x: hidden;
 }
 
-/* Biar gak ketutupan header pas scroll */
+/* Prevent cover headers */
 section {
     scroll-margin-top: 80px;
 }
@@ -74,7 +74,7 @@ header {
 .hamburger.active .bar:nth-child(1) { transform: translateY(8px) rotate(45deg); }
 .hamburger.active .bar:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
 
-/* --- Menu Navigasi (Slide UP) --- */
+/* --- Navigation menu (Slide UP) --- */
 .nav-menu {
     position: fixed;
     bottom: -100%; 
@@ -118,7 +118,7 @@ header {
 .profile-img img { 
     width: 130px; 
     border-radius: 50%; 
-    filter: grayscale(20%); 
+    filter: grayscale(100%); 
     border: 2px solid var(--text-black); 
     padding: 5px; 
     margin-bottom: 25px; 
@@ -223,7 +223,7 @@ header {
     color: #000000; 
 }
 
-/* INTERACTIVE TERMINAL STYLES */
+/* --- Interactive terminal --- */
 .terminal-section {
     padding: 60px 10%;
     background-color: var(--bg-white, #ffffff);
